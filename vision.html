@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="normal__button">
+            <div class="normal__button__front">
+                <a href="./index.html">Home</a>
+            </div>
+        </div>
+        <div class="normal__button">
+            <div class="normal__button__front">
+                <a href="./team.html">Our Team</a>
+            </div>
+        </div>
+        <div class="normal__button">
+            <div class="normal__button__front">
+                <a href="./vision.html">Our Vision</a>
+            </div>
+        </div>
+        <div class="normal__button">
+            <div class="normal__button__front">
+                <a href="https://twitter.com/TrippyFattieNFT" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+        </div>
+        <div class="normal__button">
+            <div class="normal__button__front">
+                <a href="https://www.discord.gg/ncJZwpsgZP" target="_blank" rel="noopener noreferrer">Discord</a>
+            </div>
+        </div>
+    </nav>
+    <div class="slime__nav__container">
+        <div class="slime__nav">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <article class="header">
+        <div class="floating__elements">
+            <div><img src="./assets/background.png" alt=""></div>
+            <div><img src="./assets/background.png" alt=""></div>
+            <div><img src="./assets/background.png" alt=""></div>
+        </div>
+        <div class="content__vision">
+            <div class="content__vision__back">
+                <div class="content__vision__info">
+                    <div class="content__vision__info--image">
+                        <div class="button">
+                            <div class="vision_eye crazy_eye">
+                                <div></div>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <div class="button2">
+                            <div class="vision_eye short crazy_eye">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <a href=""></a>
+                            </div>
+                        </div>
+                        <img src="./assets/images/snake_eye.png" alt="">
+                    </div>
+                    <div class="content__vision__info--text">
+                        <div class="glitch vision">
+                            <h1>Our Vision</h1>
+                            <h1>Our Vision</h1>
+                            <h1>Our Vision</h1>
+                        </div>
+                        <p>Our goal is that every short film is stunning so that other fitting DAOs will want to be
+                            included, which will be great seeing different NFT collections interact which each other in
+                            one
+                            way or another, for said Stage there will be collaborations which will be also split 50/50
+                            with
+                            the Fatties DAO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in='SourceGraphic' stdDeviation='10' />
+                <feColorMatrix in='name' mode='matrix' values='1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 20 -10' />
+                <feBlend in='sourceGraphic' />
+            </filter>
+        </defs>
+    </svg>
+    <script>
+        document.querySelector('body').addEventListener('mousemove', eyemove);
+        function eyemove() {
+            const eye = document.querySelectorAll('.crazy_eye');
+            eye.forEach(function (eye) {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                let rotation = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rotation + "deg)"
+            });
+        }
+    </script>
+</body>
+
+</html>

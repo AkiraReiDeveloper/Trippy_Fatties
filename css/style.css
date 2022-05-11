@@ -1,0 +1,1143 @@
+@font-face {
+    font-family: Jellybost;
+    src: url('../assets/fonts/Jellybost.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 500;
+    padding: 0 50px;
+}
+
+.discord {
+    margin-right: 50px;
+}
+
+.twitter {
+    margin-right: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+}
+
+.floating__elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.floating__elements div {
+    position: absolute;
+}
+
+.floating__elements img {
+    width: 100%;
+    height: 100%;
+}
+
+.floating__elements :nth-child(1) {
+    top: 50%;
+    left: 20%;
+    width: 60px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.floating__elements :nth-child(2) {
+    top: 20%;
+    left: 70%;
+
+}
+
+.floating__elements :nth-child(3) {
+    bottom: 20%;
+    right: 20%;
+
+}
+
+/* glitch effect*/
+.glitch {
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.glitch_two {
+    margin-top: 73px;
+}
+
+.glitch h1 {
+    font-family: 'Jellybost', Courier, monospace;
+    text-align: center;
+    font-size: 7em;
+    
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+}
+
+.glitch :nth-child(1) {
+    color: #F132C7;
+    animation: glitch3 2.5s infinite;
+    animation-delay: 1s;
+}
+
+.glitch :nth-child(2) {
+    color: #F72024;
+    animation: glitch2 2.5s infinite;
+}
+
+.glitch :nth-child(3) {
+    color: #08B7F6;
+    animation: glitch3 2.5s infinite;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container div>.button {
+    position: absolute;
+    top: 30%;
+    right: 42%;
+}
+
+.container div>.button2 {
+    position: absolute;
+    top: 35%;
+    right: 61%;
+}
+
+.container>div {
+    position: relative;
+    /*
+    width: 25%;
+    height: auto;*/
+}
+
+.container>div img {
+    position: relative;
+    width: 100%;
+}
+
+.slime__nav__container {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+}
+
+.slime__nav {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+    filter: url(#goo);
+}
+
+.slime__nav>div {
+    position: absolute;
+    display: block;
+    border-radius: 50% 0;
+    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+    filter: url(#goo);
+    top: -60px;
+    /*border: 10px solid #A39AA8;*/
+}
+
+/*
+.slime__nav>div::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid #00CBE7;
+    filter: none;
+}*/
+
+.slime__nav :nth-child(1) {
+    width: 30px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 1s;
+    left: 3%;
+}
+
+.slime__nav :nth-child(2) {
+    width: 40px;
+    height: 170px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 1s;
+    left: 6%;
+}
+
+.slime__nav :nth-child(3) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 1s;
+    left: 9%;
+}
+
+.slime__nav :nth-child(4) {
+    width: 30px;
+    height: 160px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 13%;
+}
+
+.slime__nav :nth-child(5) {
+    width: 50px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 1s;
+    left: 16%;
+}
+
+.slime__nav :nth-child(6) {
+    width: 40px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 4s;
+    left: 19%;
+}
+
+.slime__nav :nth-child(7) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 10s infinite linear;
+    animation-delay: 2s;
+    left: 23%;
+}
+
+.slime__nav :nth-child(8) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 3s;
+    left: 26%;
+}
+
+.slime__nav :nth-child(9) {
+    width: 40px;
+    height: 200px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 2s;
+    left: 29%;
+}
+
+.slime__nav :nth-child(10) {
+    width: 40px;
+    height: 170px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 2s;
+    left: 33%;
+}
+
+.slime__nav :nth-child(11) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 36%;
+}
+
+.slime__nav :nth-child(12) {
+    width: 40px;
+    height: 160px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 1s;
+    left: 39%;
+}
+
+.slime__nav :nth-child(13) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 2s;
+    left: 43%;
+}
+
+.slime__nav :nth-child(14) {
+    width: 40px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 46%;
+}
+
+.slime__nav :nth-child(15) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 10s infinite linear;
+    animation-delay: 1s;
+    left: 49%;
+}
+
+.slime__nav :nth-child(16) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 53%;
+}
+
+.slime__nav :nth-child(17) {
+    width: 30px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 1s;
+    left: 56%;
+}
+
+.slime__nav :nth-child(18) {
+    width: 40px;
+    height: 170px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 1s;
+    left: 59%;
+}
+
+.slime__nav :nth-child(19) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 1s;
+    left: 63%;
+}
+
+.slime__nav :nth-child(20) {
+    width: 30px;
+    height: 160px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 66%;
+}
+
+.slime__nav :nth-child(21) {
+    width: 50px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 1s;
+    left: 69%;
+}
+
+.slime__nav :nth-child(22) {
+    width: 40px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 4s;
+    left: 73%;
+}
+
+.slime__nav :nth-child(23) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 10s infinite linear;
+    animation-delay: 2s;
+    left: 76%;
+}
+
+.slime__nav :nth-child(24) {
+    width: 40px;
+    height: 155px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 3s;
+    left: 79%;
+}
+
+.slime__nav :nth-child(25) {
+    width: 40px;
+    height: 200px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 2s;
+    left: 83%;
+}
+
+.slime__nav :nth-child(26) {
+    width: 40px;
+    height: 70px;
+    animation: nav_slime 9s infinite linear;
+    animation-delay: 2s;
+    left: 86%;
+}
+
+.slime__nav :nth-child(27) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    left: 89%;
+}
+
+.slime__nav :nth-child(28) {
+    width: 40px;
+    height: 170px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 1s;
+    left: 93%;
+}
+
+.slime__nav :nth-child(29) {
+    width: 40px;
+    height: 180px;
+    animation: nav_slime 7s infinite linear;
+    animation-delay: 2s;
+    left: 96%;
+}
+
+.slime__nav :nth-child(30) {
+    width: 40px;
+    height: 150px;
+    animation: nav_slime 8s infinite linear;
+    animation-delay: 2s;
+    right: 95%;
+}
+
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
+
+.crazy_botton {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.crazy_botton.short {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.crazy_botton a {
+    z-index: 100;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 0 0 1rem white;
+    font-weight: 900;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.crazy_botton > a {
+    color: white;
+    
+}*/
+
+.crazy_botton>div {
+    position: absolute;
+    border-radius: 50px;
+    animation: crazy-effect 1s linear infinite;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+}
+
+.crazy_botton :nth-child(1) {
+    width: 120%;
+    height: 120%;
+    animation-delay: .10s;
+}
+
+.crazy_botton :nth-child(2) {
+    width: 100%;
+    height: 100%;
+    animation-delay: .8s;
+}
+
+.crazy_botton :nth-child(3) {
+    width: 80%;
+    height: 80%;
+    animation-delay: .6s;
+}
+
+.crazy_botton :nth-child(4) {
+    width: 60%;
+    height: 60%;
+    animation-delay: .4s;
+}
+
+.crazy_botton :nth-child(5) {
+    width: 40%;
+    height: 40%;
+    animation-delay: .2s;
+}
+
+.crazy_botton :nth-child(6) {
+    width: 20%;
+    height: 20%;
+}
+
+.normal__button {
+    margin-right: 15px;
+    position: relative;
+}
+
+.normal__button__front{
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.normal__button__front:hover > a{
+    transform: translate(10px, -10px);
+}
+
+.normal__button a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    /*background:radial-gradient(ellipse at 50% 50%, #FF2ADE 0%, #F5017D 91%);*/
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.slime_twitter,
+.slime>a:hover~.slime_twitter>.slime_botton_one,
+.slime>a:hover~.slime_twitter>.slime_botton_two,
+.slime>a:hover~.slime_twitter>.slime_botton_three,
+.slime>a:hover~.slime_twitter>.slime_botton_four,
+.slime>a:hover~.slime_twitter>.slime_botton_five {
+    background-color: #FFFFFF;
+}
+
+.slime_discord,
+.slime>a:hover~.slime_discord>.slime_botton_one,
+.slime>a:hover~.slime_discord>.slime_botton_two,
+.slime>a:hover~.slime_discord>.slime_botton_three,
+.slime>a:hover~.slime_discord>.slime_botton_four,
+.slime>a:hover~.slime_discord>.slime_botton_five {
+    background-color: #E2F337;
+}
+
+.slime {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    z-index: 1;
+}
+
+.slime_botton {
+    position: relative;
+    filter: url(#goo);
+    width: 130px;
+    height: 50px;
+}
+
+.slime a {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    color: #17171F;
+    text-decoration: none;
+    text-shadow: 0 0 1rem white;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    font-size: .8rem;
+}
+
+.slime>a:hover~.slime_botton>.slime_botton_one {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    left: 0;
+    top: 90%;
+    transition: all .5s linear;
+}
+
+.slime>a:hover~.slime_botton>.slime_botton_two {
+    position: absolute;
+    width: 32%;
+    height: 50%;
+    border-radius: 50%;
+
+    right: 0;
+    top: 140%;
+    transition: all .9s linear;
+}
+
+.slime>a:hover~.slime_botton>.slime_botton_three {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+
+    top: 110%;
+    right: 38%;
+}
+
+.slime>a:hover~.slime_botton>.slime_botton_four {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+
+    top: 40%;
+    right: 0;
+    transition: all .5s linear;
+}
+
+.slime>a:hover~.slime_botton>.slime_botton_five {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+    top: 100%;
+    right: 38%;
+    transition: all .5s linear;
+}
+
+/*sneekpeeks*/
+
+.sneekpeeks {
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+
+.sneekpeeks>div:hover {
+    transform: translate(10%, 0);
+    transition: all .5s linear;
+    transition-delay: 1.5s;
+}
+
+.sneekpeeks :nth-child(1):hover {
+    transform: none;
+}
+
+.sneekpeeks>div:hover~div {
+    z-index: -1;
+    animation: card 1.5s ease-in-out;
+    left: 0;
+
+}
+
+.sneekpeeks>div:hover~div {
+    transform: rotate(0deg);
+}
+
+.sneekpeeks :nth-child(5) {
+    z-index: 2;
+    left: 10%;
+    transform: rotate(10deg);
+}
+
+.sneekpeeks :nth-child(5):hover {
+    transform: none;
+    transition-delay: 0s;
+}
+
+
+.sneekpeeks>div {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.sneekpeeks>div img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.sneekpeeks>div video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/*Keyframes*/
+@keyframes card {
+    0% {
+        left: 10%;
+        z-index: 1;
+        transform: rotate(10deg);
+    }
+
+    50% {
+        left: 120%;
+        transform: rotate(45deg);
+        z-index: 1;
+    }
+
+    51% {
+        z-index: -1;
+    }
+
+    100% {}
+}
+
+@keyframes floating {
+    0% {}
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {}
+}
+
+@keyframes crazy-effect {
+    0% {}
+
+    20% {
+        background-color: #00CBE7;
+    }
+
+    40% {
+        background-color: #FF2ADE;
+    }
+
+    60% {
+        background-color: #FF8C6D;
+    }
+
+    80% {
+        background-color: #6411ED;
+    }
+
+    100% {
+        background-color: #FF3871;
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        transform: none;
+
+    }
+
+    7% {
+        transform: translate(-2px, -3px);
+
+    }
+
+    10% {
+        transform: none;
+
+    }
+
+    27% {
+        transform: none;
+
+    }
+
+    30% {
+        transform: translate(-5px, -2px);
+
+    }
+
+    35% {
+        transform: none;
+
+    }
+
+    52% {
+        transform: none;
+
+    }
+
+    55% {
+        transform: translate(-5px, -1px);
+
+    }
+
+    50% {
+        transform: none;
+
+    }
+
+    72% {
+        transform: none;
+
+    }
+
+    75% {
+        transform: translate(-2px, -6px);
+
+    }
+
+    80% {
+        transform: none;
+
+    }
+
+    100% {
+        transform: none;
+
+    }
+}
+
+@keyframes glitch3 {
+    0% {
+        transform: none;
+
+    }
+
+    7% {
+        transform: translate(2px, 3px);
+
+    }
+
+    10% {
+        transform: none;
+
+    }
+
+    27% {
+        transform: none;
+
+    }
+
+    30% {
+        transform: translate(5px, 2px);
+
+    }
+
+    35% {
+        transform: none;
+
+    }
+
+    52% {
+        transform: none;
+
+    }
+
+    55% {
+        transform: translate(5px, 1px);
+
+    }
+
+    50% {
+        transform: none;
+
+    }
+
+    72% {
+        transform: none;
+
+    }
+
+    75% {
+        transform: translate(2px, 6px);
+
+    }
+
+    80% {
+        transform: none;
+
+    }
+
+    100% {
+        transform: none;
+
+    }
+}
+
+
+@keyframes nav_slime {
+    0% {
+        top: -60px;
+    }
+
+    50% {
+        top: 5px;
+    }
+
+    100% {
+        top: -60px;
+    }
+}
+
+/* Our Vision Style*/
+
+.content__vision{
+    position: relative;
+    width: 1000px;
+    height: auto;
+}
+
+.content__vision__info{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #FFFFFF;
+    transform: translate(15px, -15px);
+    display: flex;
+    border-radius: 10px;
+    border: solid 3px #000000;
+}
+
+.content__vision__back{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #00C0EF;
+    border-radius: 10px;
+}
+
+.content__vision__info--image{
+    position: relative;
+    display: flex;
+    width: 40%;
+}
+
+.content__vision__info--text{
+    width: 60%;
+    padding: 50px;
+}
+
+.content__vision__info--image img{
+    border-radius: 0 10px;
+    width: 100%;
+    height: auto;
+    z-index: 80;
+}
+
+.content__vision__info--image>.button {
+    position: absolute;
+    top: 18.5%;
+    right: 44%;
+}
+
+.content__vision__info--image>.button2 {
+    position: absolute;
+    top: 24%;
+    right: 61%;
+}
+
+/* glitch effect*/
+.glitch.vision {
+    position: relative;
+    width: 100%;
+}
+
+.glitch.vision h1 {
+    font-family: 'Jellybost', Courier, monospace;
+    text-align: start;
+    font-size: 3em;
+    font-weight: 900;
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+}
+
+.content__vision__info--text p{
+    position: relative;
+    margin-top: 30px;
+    font-family: 'Poppins', Courier, monospace;
+}
+
+.vision_eye {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.vision_eye.short {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.vision_eye > div {
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.vision_eye div{
+    width: 37%;
+    height: 37%;
+    background-color: #000000;
+    border: solid 3px #0861AF;
+}
+
+/* Our team Style*/
+
+.team_container{
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+}
+
+.content__team{
+    position: relative;
+    width: 350px;
+    height: auto;
+}
+
+.content__team__info{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #FFFFFF;
+    transform: translate(15px, -15px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: solid 3px #000000;
+}
+
+.content__team__back{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #00C0EF;
+    border-radius: 10px;
+}
+
+.content__team__info--image{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content__team__info--text{
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+}
+
+.content__team__info--image img{
+    width: 90%;
+    height: auto;
+    z-index: 80;
+}
+
+.content__team__info--image>.button {
+    position: absolute;
+    top: 18.5%;
+    right: 44%;
+}
+
+.content__team__info--image>.button2 {
+    position: absolute;
+    top: 23.9%;
+    right: 60%;
+}
+
+/* glitch effect*/
+.glitch.team {
+    position: relative;
+    width: 100%;
+}
+
+.glitch.team h1 {
+    font-family: 'Jellybost', Courier, monospace;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 900;
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+}
+
+.content__team__info--text p{
+    position: relative;
+    margin-top: 30px;
+    font-family: 'Poppins', Courier, monospace;
+    text-align: justify;
+}
+
+.team_eye {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.team_eye.short {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.team_eye > div {
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.team_eye div{
+    width: 37%;
+    height: 37%;
+    background-color: #000000;
+    border: solid 3px #0861AF;
+}
