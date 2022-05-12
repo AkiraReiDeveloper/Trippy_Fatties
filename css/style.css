@@ -20,6 +20,10 @@ nav {
     padding: 0 50px;
 }
 
+svg {
+    position: absolute;
+}
+
 .discord {
     margin-right: 50px;
 }
