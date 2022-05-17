@@ -14,7 +14,7 @@ nav {
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     z-index: 500;
     padding: 0 50px;
@@ -22,6 +22,29 @@ nav {
 
 svg {
     position: absolute;
+}
+
+body {
+    background-color: #000000;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav_left a {
+    font-family: 'Jellybost', Courier, monospace;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #F4FF2F;
+    text-shadow: 0 1px 0 #B4FF00, 0 2px 0 #7dd108, 0 3px 0 #7dd108, 0 4px 0 #6FB213, 0 5px 0 #6FB213, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.nav_right {
+    display: flex;
+    align-items: center;
 }
 
 .discord {
@@ -32,33 +55,71 @@ svg {
     margin-right: 10px;
 }
 
-.background{
-    position: absolute;
+.background {
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
-.background img{
+.background img:nth-child(1) {
+    top: -20vh;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 120vh;
 }
 
-.background img:nth-child(2){
-    animation: hand 2s linear infinite;
+.background img:nth-child(2) {
+    position: absolute;
+    bottom: 16%;
+    left: 15%;
+    width: 280px;
+    animation: person 2s linear infinite;
+    z-index: 1;
 }
 
-@keyframes hand{
-    50%{
+.background>.fattie {
+    position: absolute;
+    bottom: 18%;
+    right: 19%;
+    width: 550px;
+    height: auto;
+    overflow: hidden;
+}
+
+.background>.fattie img {
+    position: relative;
+    top: 0;
+    left: 15px;
+    width: 100%;
+    height: auto;
+    animation: fattie 5s linear infinite;
+}
+
+.background_normal {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.background_normal>img {
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    top: -20vh;
+    filter: blur(2px);
+}
+
+@keyframes person {
+    50% {
         transform: translateY(-15px);
     }
 }
 
-.header {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+@keyframes fattie {
+    50% {
+        transform: translateX(40px);
+    }
 }
 
 .floating__elements {
@@ -98,20 +159,23 @@ svg {
 
 /* glitch effect*/
 .glitch {
-    position: relative;
-    width: 80%;
-    text-align: center;
+    position: absolute;
+    right: 140px;
+    bottom: 200px;
 }
 
 .glitch_two {
-    margin-top: 73px;
+    position: absolute;
+    right: 180px;
+    bottom: 100px;
 }
 
 .glitch h1 {
     font-family: 'Jellybost', Courier, monospace;
     text-align: center;
     font-size: 7em;
-    
+    text-shadow: 2px 2px 2px #000000;
+    font-weight: 200;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
@@ -119,18 +183,18 @@ svg {
 }
 
 .glitch :nth-child(1) {
-    color: #F132C7;
+    color: #000000;
     animation: glitch3 2.5s infinite;
     animation-delay: 1s;
 }
 
 .glitch :nth-child(2) {
-    color: #F72024;
+    color: #6FB213;
     animation: glitch2 2.5s infinite;
 }
 
 .glitch :nth-child(3) {
-    color: #08B7F6;
+    color: #B4FF00;
     animation: glitch3 2.5s infinite;
 }
 
@@ -170,16 +234,17 @@ svg {
 
 .slime__nav__container {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 70px;
-    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+    background: linear-gradient(to top, #B4FF00, #7dd108);
 }
 
 .slime__nav {
     position: absolute;
     width: 100%;
     height: 120%;
-    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+    background: linear-gradient(to top, #B4FF00, #7dd108);
     filter: url(#goo);
 }
 
@@ -187,7 +252,7 @@ svg {
     position: absolute;
     display: block;
     border-radius: 50% 0;
-    background: linear-gradient(to top, #0BB7F6, #00CBE7);
+    background: linear-gradient(to top, #B4FF00, #7dd108);
     filter: url(#goo);
     top: -60px;
     /*border: 10px solid #A39AA8;*/
@@ -204,7 +269,7 @@ svg {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 5px solid #00CBE7;
+    border: 5px solid #6FB213;
     filter: none;
 }*/
 
@@ -547,15 +612,15 @@ svg {
     position: relative;
 }
 
-.normal__button__front{
+.normal__button__front {
     display: flex;
     background-color: #000000;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 11px;
 }
 
-.normal__button__front:hover > a{
+.normal__button__front:hover>a {
     transform: translate(10px, -10px);
 }
 
@@ -569,7 +634,7 @@ svg {
     height: 100%;
     padding: 10px 15px;
     /*background:radial-gradient(ellipse at 50% 50%, #FF2ADE 0%, #F5017D 91%);*/
-    background-color: #FFFFFF;
+    background-color: #F4FF2F;
     border-radius: 10px;
 }
 
@@ -673,82 +738,151 @@ svg {
     transition: all .5s linear;
 }
 
-/*sneekpeeks*/
+/*sneakpeeks*/
 
-.sneekpeeks {
+.divisor{
+    position: absolute;
+    width: 100%;
+    height: 3vh;
+    bottom: 0;
+    background: #8CDE4D;
+    background: linear-gradient(to top, #B4FF00 10%, transparent 100%);
+}
+
+.sneakpeeks_area{
     position: relative;
-    width: 300px;
-    height: auto;
+    width: 100%;
+    height: 100vh;
+    background: #B4FF00;
+    background: linear-gradient(95deg, #F4FF2F 0%, #B4FF00 100%);
+    /*overflow: hidden;*/
+    display: flex;
+    justify-content: center;
+}
+
+.sneakpeeks {
+    position: relative;
+    width: 400px;
+    height: fit-content;
+    top: 25%;
 }
 
 
-.sneekpeeks>div:hover {
+.sneakpeeks>div:hover {
     transform: translate(10%, 0);
     transition: all .5s linear;
     transition-delay: 1.5s;
 }
 
-.sneekpeeks :nth-child(1):hover {
+.sneakpeeks>div{
+    z-index: 2;
+}
+
+.sneakpeeks div:nth-child(1):hover {
     transform: none;
 }
 
-.sneekpeeks>div:hover~div {
-    z-index: -1;
+.sneakpeeks>div:hover~div {
+    z-index: 1;
     animation: card 1.5s ease-in-out;
     left: 0;
 
 }
 
-.sneekpeeks>div:hover~div {
+.sneakpeeks>div:hover~div {
     transform: rotate(0deg);
 }
 
-.sneekpeeks :nth-child(5) {
+.sneakpeeks div:nth-child(3) {
     z-index: 2;
     left: 10%;
     transform: rotate(10deg);
 }
 
-.sneekpeeks :nth-child(5):hover {
+.sneakpeeks div:nth-child(3):hover {
     transform: none;
     transition-delay: 0s;
 }
 
 
-.sneekpeeks>div {
+.sneakpeeks>div {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-.sneekpeeks>div img {
+.sneakpeeks>div img {
     width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
-.sneekpeeks>div video {
+.sneakpeeks>div video {
     width: 100%;
     height: auto;
     border-radius: 20px;
+}
+
+/* glitch effect*/
+.glitch_sneak_peek {
+    position: relative;
+    top: 25%;
+    width: 550px;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+    
+}
+
+.glitch_sneak_peek_content{
+    position: absolute;
+    transform: rotate(10deg);
+}
+
+.glitch_sneak_peek_content h1 {
+    font-family: 'Jellybost', Courier, monospace;
+    text-align: center;
+    font-size: 7em;
+    text-shadow: 2px 2px 2px #000000;
+    font-weight: 200;
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+}
+
+.glitch_sneak_peek_content h1:nth-child(1) {
+    color: #000000;
+    animation: glitch3 2.5s infinite;
+    animation-delay: 1s;
+}
+
+.glitch_sneak_peek_content h1:nth-child(2) {
+    color: #6FB213;
+    animation: glitch2 2.5s infinite;
+}
+
+.glitch_sneak_peek_content h1:nth-child(3) {
+    color: #B4FF00;
+    animation: glitch3 2.5s infinite;
 }
 
 /*Keyframes*/
 @keyframes card {
     0% {
         left: 10%;
-        z-index: 1;
+        z-index: 2;
         transform: rotate(10deg);
     }
 
     50% {
         left: 120%;
         transform: rotate(45deg);
-        z-index: 1;
+        z-index: 2;
     }
 
     51% {
-        z-index: -1;
+        z-index: 1;
     }
 
     100% {}
@@ -768,7 +902,7 @@ svg {
     0% {}
 
     20% {
-        background-color: #00CBE7;
+        background-color: #6FB213;
     }
 
     40% {
@@ -939,43 +1073,45 @@ svg {
 
 /* Our Vision Style*/
 
-.content__vision{
+.content__vision {
     position: relative;
     width: 1000px;
     height: auto;
 }
 
-.content__vision__info{
+.content__vision__info {
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #FFFFFF;
+    background: #B4FF00;
+    background: linear-gradient(95deg, #CBE45D 45%, #8CDE4D 100%);
     transform: translate(15px, -15px);
     display: flex;
     border-radius: 10px;
-    border: solid 3px #000000;
 }
 
-.content__vision__back{
+.content__vision__back {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #00C0EF;
+    background-color: #6FB213;
     border-radius: 10px;
 }
 
-.content__vision__info--image{
+.content__vision__info--image {
     position: relative;
     display: flex;
     width: 40%;
 }
 
-.content__vision__info--text{
+.content__vision__info--text {
     width: 60%;
     padding: 50px;
+    color: #365c00;
+    font-weight: 700;
 }
 
-.content__vision__info--image img{
+.content__vision__info--image img {
     border-radius: 0 10px;
     width: 100%;
     height: auto;
@@ -995,26 +1131,44 @@ svg {
 }
 
 /* glitch effect*/
-.glitch.vision {
+.glitch_vision {
     position: relative;
     width: 100%;
 }
 
-.glitch.vision h1 {
+.glitch_vision h1 {
     font-family: 'Jellybost', Courier, monospace;
     text-align: start;
     font-size: 3em;
-    font-weight: 900;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px #000000;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
     /*Animation*/
 }
 
-.content__vision__info--text p{
+.glitch_vision :nth-child(1) {
+    color: #000000;
+    animation: glitch3 2.5s infinite;
+    animation-delay: 1s;
+}
+
+.glitch_vision :nth-child(2) {
+    color: #6FB213;
+    animation: glitch2 2.5s infinite;
+}
+
+.glitch_vision :nth-child(3) {
+    color: #B4FF00;
+    animation: glitch3 2.5s infinite;
+}
+
+.content__vision__info--text p {
     position: relative;
     margin-top: 30px;
     font-family: 'Poppins', Courier, monospace;
+    text-align: justify;
 }
 
 .vision_eye {
@@ -1033,7 +1187,7 @@ svg {
     height: 25px;
 }
 
-.vision_eye > div {
+.vision_eye>div {
     position: absolute;
     border-radius: 50px;
     top: 50%;
@@ -1041,7 +1195,7 @@ svg {
     transform: translate(-50%, -50%);
 }
 
-.vision_eye div{
+.vision_eye div {
     width: 37%;
     height: 37%;
     background-color: #000000;
@@ -1050,63 +1204,67 @@ svg {
 
 /* Our team Style*/
 
-.team_container{
+.team_container {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 1300px;
     align-items: center;
 }
 
-.content__team{
+.content__team {
     position: relative;
     width: 300px;
     height: auto;
 }
 
-.content__team__back:hover > .content__team__info{
+.content__team__back:hover>.content__team__info {
     transform: translate(15px, -15px);
 }
-.content__team__back:hover .content__team__info--text p{
+
+.content__team__back:hover .content__team__info--text p {
     display: flex;
 }
-.content__team__info{
+
+.content__team__info {
     width: 100%;
     height: fit-content;
     position: relative;
-    background-color: #FFFFFF;
+    background: #031B3F;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    border: solid 3px #000000;
+
     transition: all .3s linear;
 }
 
-.content__team__back{
+.content__team__back {
     position: relative;
     width: 100%;
     height: fit-content;
-    background-color: #00C0EF;
+    background: #B4FF00;
     border-radius: 10px;
     z-index: 100;
 }
 
-.content__team__info--image{
+.content__team__info--image {
     position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
+    background: linear-gradient(95deg, #CBE45D 45%, #8CDE4D 100%);
+    border-radius: 10px 10px 0 0;
 }
 
-.content__team__info--text{
+.content__team__info--text {
     width: 100%;
     padding: 30px 20px 30px 20px;
 }
 
-.content__team__info--text p{
+.content__team__info--text p {
     display: none;
 }
 
-.content__team__info--image img{
+.content__team__info--image img {
     width: 90%;
     height: auto;
     z-index: 80;
@@ -1125,27 +1283,50 @@ svg {
 }
 
 /* glitch effect*/
-.glitch.team {
+.glitch_team {
     position: relative;
     width: 100%;
 }
 
-.glitch.team h1 {
+.glitch_team h1 {
     font-family: 'Jellybost', Courier, monospace;
     text-align: center;
     font-size: 2.5em;
-    font-weight: 900;
+    text-shadow: 2px 2px 2px #000000;
+    font-weight: 200;
     /*Create overlap*/
     margin: 0;
     line-height: 0;
     /*Animation*/
 }
 
-.content__team__info--text p{
+.content__team__info:hover .glitch_team h1:nth-child(1) {
+    color: #000000;
+    animation: glitch3 2.5s infinite;
+    animation-delay: 1s;
+}
+
+.content__team__info:hover .glitch_team h1:nth-child(2) {
+    color: #6FB213;
+    animation: glitch2 2.5s infinite;
+}
+
+.content__team__info:hover .glitch_team h1:nth-child(3) {
+    color: #B4FF00;
+    animation: glitch3 2.5s infinite;
+}
+
+.glitch_team h1:nth-child(3) {
+    color: #B4FF00;
+}
+
+.content__team__info--text p {
     position: relative;
     margin-top: 30px;
     font-family: 'Poppins', Courier, monospace;
     text-align: justify;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 .team_eye {
@@ -1164,7 +1345,7 @@ svg {
     height: 18px;
 }
 
-.team_eye > div {
+.team_eye>div {
     position: absolute;
     border-radius: 50px;
     top: 50%;
@@ -1172,9 +1353,94 @@ svg {
     transform: translate(-50%, -50%);
 }
 
-.team_eye div{
+.team_eye div {
     width: 39%;
     height: 39%;
     background-color: #000000;
     border: solid 3px #0861AF;
 }
+
+.post {
+    font-size: .6rem;
+}
+
+.bubbles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bubbles div{
+	position: absolute;
+	width: 100px;
+    height: 100px;
+    background-color: #50EA85;
+    border-radius: 50%;
+}
+
+.bubbles div:nth-child(1){
+    transform: scale(0.8);
+    left: 5%;
+    animation: bubbles 10s linear infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.bubbles div:nth-child(2){
+    transform: scale(1);
+    left: 80%;
+    animation: bubbles 10s linear infinite;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+.bubbles div:nth-child(3){
+    transform: scale(0.5);
+    left: 60%;
+    animation: bubbles 10s linear infinite;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+.bubbles div:nth-child(4){
+    transform: scale(0.6);
+    left: 40%;
+    animation: bubbles 10s linear infinite;
+    opacity: 0;
+}
+
+.bubbles div:nth-child(5){
+    transform: scale(0.4);
+    left: 20%;
+    animation: bubbles 10s linear infinite;
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+.bubbles div:after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(ellipse at center,  rgba(180, 255, 0,0.3) 0%,rgba(111, 178, 19,0) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
+	border-radius: 50%;
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bubbles{
+    0%{
+        transform: translate( 0, 100vh);
+        opacity: 1;
+    }
+
+    50%{
+        transform: translate(-50px, 45vh);
+    }
+
+    100%{
+        transform: translate(0, -10vh);
+        opacity: .2;
+    }
+}
+
