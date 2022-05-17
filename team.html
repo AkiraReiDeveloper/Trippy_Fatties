@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resposive.css">
 </head>
 
 <body>
@@ -18,7 +20,9 @@
         <div class="nav_left">
             <a href="./index.html">Trippy Fatties</a>
         </div>
-        <div class="nav_right">
+        <a class="nav_menu" onclick="myNavbar()" href="javascript:void(0);"><i
+            class="fas fa-bars"></i></a>
+        <div class="nav_right" id="menu">
             <div class="normal__button">
                 <div class="normal__button__front">
                     <a href="./index.html">Home</a>
@@ -124,9 +128,9 @@
                                 <h1>Soren</h1>
                             </div><br><br>
                             <div class="glitch_team post">
-                                <h1>Writter</h1>
-                                <h1>Writter</h1>
-                                <h1>Writter</h1>
+                                <h1>Creative Writer</h1>
+                                <h1>Creative Writer</h1>
+                                <h1>Creative Writer</h1>
                             </div>
                             <p>Working for a long time in writing, creating wonderful stories and elaborating countless
                                 writing creations. Katie is one of the best creative writer that takes into account the
@@ -170,7 +174,7 @@
                                 <h1>Ilustrador</h1>
                             </div>
                             <p>Worked with multiple creative designs in various projects, focusing on graphical design
-                                and character illustation. Bringing a lot of creative ideas for the design elements.</p>
+                                and character Ilustation. Bringing a lot of creative ideas for the design elements.</p>
                         </div>
                     </div>
                 </div>
@@ -258,8 +262,8 @@
             </div>
         </div>
     </article>
-    <footer>
-        <b style="color: #031B3F;">© 2022 Trippy Fatties. All rights reserved.</b>
+    <footer class="footer_responsive" style="color: #031B3F;">
+        <b>© 2022 Trippy Fatties. All rights reserved.</b>
     </footer>
     <svg>
         <defs>
@@ -273,19 +277,7 @@
             </filter>
         </defs>
     </svg>
-    <script>
-        document.querySelector('body').addEventListener('mousemove', eyemove);
-        function eyemove() {
-            const eye = document.querySelectorAll('.crazy_eye');
-            eye.forEach(function (eye) {
-                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
-                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
-                let radian = Math.atan2(event.pageX - x, event.pageY - y);
-                let rotation = (radian * (180 / Math.PI) * -1) + 270;
-                eye.style.transform = "rotate(" + rotation + "deg)"
-            });
-        }
-    </script>
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
