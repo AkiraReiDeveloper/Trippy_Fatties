@@ -112,6 +112,20 @@
         border-radius: 0;
     }
 
+    .error h1{
+        font-size: 120px;
+    }
+    
+    .error h2{
+        top: 0;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .error a{
+        margin-top: 20px;
+    }
+
     @keyframes person_responsive{
         50% {
             transform: translate( -50%, -45%);
