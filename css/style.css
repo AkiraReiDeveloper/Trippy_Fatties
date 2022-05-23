@@ -25,7 +25,7 @@ svg {
 }
 
 body {
-    background-color: #000000;
+    background-color: #ebff94;
 }
 
 .nav_left {
@@ -1275,13 +1275,19 @@ svg {
     z-index: 100;
 }
 
-.content__team__info--image {
+.content__team__info--image{
     position: relative;
     display: flex;
     width: 100%;
-    justify-content: center;
     background: linear-gradient(95deg, #CBE45D 45%, #8CDE4D 100%);
     border-radius: 10px 10px 0 0;
+}
+
+.content__team__info--image figure{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .content__team__info--text {
@@ -1293,7 +1299,7 @@ svg {
     display: none;
 }
 
-.content__team__info--image img {
+.content__team__info--image figure img {
     width: 90%;
     height: auto;
     z-index: 80;
