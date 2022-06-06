@@ -27,6 +27,7 @@ svg {
 
 body {
     background-color: #ebff94;
+    overflow-x: hidden;
 }
 
 .nav_left {
@@ -1412,23 +1413,116 @@ svg {
 .sneakpeeks_two{
     width: 100%;
     height: 100vh;
-}
-
-.sneakpeeks_two_banner{
     position: relative;
-    width: 110%;
-    top: 15%;
+    /*background: linear-gradient(to bottom, #B8E44D 50%, #75C761 100%);*/
+    z-index: -2;
 }
 
-.sneakpeeks_two_banner figure{
+.sneakpeeks_two_banner .banner{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: url(../assets/images/banner1.png);
+    background-size: 2300px 130px;
     width: 100%;
     margin-top: 10px;
     margin-left: 5px;
 }
 
-.sneakpeeks_two_banner figure > img{
+.sneakpeeks_two_banner .banner#banner1{
+    animation: animatedBanner 63s linear infinite;
+    top: 180px;
+}
+
+.sneakpeeks_two_banner .banner#banner2{
+    animation: animatedBanner 66s linear infinite;
+    top: 330px;
+}
+
+.sneakpeeks_two_banner .banner#banner3{
+    animation: animatedBanner 69s linear infinite;
+    top: 480px;
+}
+
+.sneakpeeks_two_fatties > figure{
+    position: absolute;
+    bottom: 15%;
+    
+}
+
+.sneakpeeks_two_fatties figure:nth-child(1){
+    width: 600px;
+    right: 440px;
+}
+
+.sneakpeeks_two_fatties figure:nth-child(2){
+    width: 650px;
+    right: 20px;
+}
+
+.sneakpeeks_two_fatties > figure img{
     width: 100%;
 }
+
+.waves .wave{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../assets/images/wave.png);
+    background-size: 1300px 100px;
+}
+
+.waves .wave#wave1{
+    animation: animatedWave 18s linear infinite;
+    bottom: 15%;
+}
+
+.waves .wave#wave2{
+    z-index: -1;
+    animation: animatedWave2 20s linear infinite;
+    opacity: .8;
+    bottom: 17%;
+}
+
+.divisor2{
+    position: absolute;
+    width: 100%;
+    height: 3vh;
+    top: 0;
+    background: #8CDE4D;
+    background: linear-gradient(to bottom, #B4FF00 10%, transparent 100%);
+}
+
+
+@keyframes animatedBanner{
+    0%{
+        background-position-x: 2300px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatedWave{
+    0%{
+        background-position-x: 1300px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatedWave2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1300px;
+    }
+}
+
 
 footer{
     position: absolute;
