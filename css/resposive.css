@@ -172,4 +172,26 @@
     .content__vision__info--text{
         width: 100%;
     }
+
+    .sneakpeeks_two_fatties figure:nth-child(1){
+        width: 250px;
+        right: 180px;
+    }
+    
+    .sneakpeeks_two_fatties figure:nth-child(2){
+        width: 280px;
+        right: -30px;
+    }
+
+    .sneakpeeks_two_banner .banner#banner1{
+        top: 80px;
+    }
+    
+    .sneakpeeks_two_banner .banner#banner2{
+        top: 240px;
+    }
+    
+    .sneakpeeks_two_banner .banner#banner3{
+        top: 400px;
+    }
 }
