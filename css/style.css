@@ -1448,7 +1448,7 @@ svg {
 
 .sneakpeeks_two_fatties>figure {
     position: absolute;
-    bottom: 15%;
+    bottom: 14%;
 }
 
 .sneakpeeks_two_fatties figure:nth-child(1) {
@@ -1476,14 +1476,14 @@ svg {
 
 .waves .wave#wave1 {
     animation: animatedWave 18s linear infinite;
-    bottom: 15%;
+    bottom: 13%;
 }
 
 .waves .wave#wave2 {
     z-index: -1;
     animation: animatedWave2 20s linear infinite;
     opacity: .8;
-    bottom: 17%;
+    bottom: 15%;
 }
 
 .divisor2 {

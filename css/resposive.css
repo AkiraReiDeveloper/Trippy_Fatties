@@ -194,4 +194,12 @@
     .sneakpeeks_two_banner .banner#banner3{
         top: 400px;
     }
+
+    .waves .wave#wave1 {
+        bottom: 10%;
+    }
+    
+    .waves .wave#wave2 {
+        bottom: 12%;
+    }
 }
