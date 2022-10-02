@@ -136,10 +136,41 @@
         display: none;
     }
 
+    .team_container .float_elements .float_info{
+        position: relative;
+        left: 0; 
+        right: 0;
+        top: 0;
+        animation: none;
+        width: 300px;
+        border-radius: 10px;
+        height: fit-content;
+        justify-content: start;
+        text-align: left;
+        padding: 5px 10px;
+        margin-bottom: 10px;    
+        flex-direction: column;    
+    }
+
+    .team_container .float_elements .float_info .float_info--text{
+        left: 0;
+        position: relative;
+        background-color: transparent;
+        display: none;
+    }
+
+    .team_container .float_elements .float_info:hover > .float_info--text{
+        display: flex;
+    }
+
     .team_container {
         flex-direction: column;
         padding: 0;
         margin-top: 100px;
+    }
+
+    .team_container h1{
+        font-size: 2rem;
     }
 
     .content__team__info {

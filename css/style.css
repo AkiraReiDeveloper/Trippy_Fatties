@@ -1051,6 +1051,7 @@ svg {
     transform: translate(15px, -15px);
     display: flex;
     border-radius: 10px;
+    align-items: flex-end;
 }
 
 .content__vision__back {
@@ -1065,6 +1066,8 @@ svg {
     position: relative;
     display: flex;
     width: 40%;
+    height: min-content;
+    
 }
 
 .content__vision__info--text {
@@ -1167,12 +1170,125 @@ svg {
 
 /* Our team Style*/
 
+.float_info{
+    width: 130px;
+    height: 130px;
+    background-color: #F4FF2F;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', Courier, monospace;
+    font-size: larger;
+    font-weight: 800;
+    border: #1cbb00 solid 5px;
+    position: absolute;
+    animation: float_info linear 4s infinite;
+}
+
+.float_info:hover > .float_info--text{
+    opacity: 1;
+}
+
+.float_info--text{
+    opacity: 0;
+    position: absolute;
+    width: 300px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, .50);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.float_elements .float_info:nth-child(1) > .float_info--text{
+    left: 120%;
+}
+
+.float_elements .float_info:nth-child(2) > .float_info--text{
+    left: 120%;
+}
+
+.float_elements .float_info:nth-child(3) > .float_info--text{
+    left: 120%;
+}
+
+.float_elements .float_info:nth-child(4) > .float_info--text{
+    right: 120%;
+}
+
+.float_elements .float_info:nth-child(5) > .float_info--text{
+    right: 120%;
+}
+
+.float_elements .float_info:nth-child(6) > .float_info--text{
+    right: 120%;
+}
+
+.float_elements{
+    position: relative;
+}
+
+.float_elements .float_info:nth-child(1){
+    left: 300px;
+    top: -100px;
+    justify-content: center;
+    animation-delay: 1.8s;
+}
+
+.float_elements .float_info:nth-child(2){
+    left: 400px;
+    top: 100px;
+    animation-delay: 1.5s;
+}
+
+.float_elements .float_info:nth-child(3){
+    left: 300px;
+    top: 300px;
+    justify-content: center;
+    animation-delay: 1.1s;
+}
+
+.float_elements .float_info:nth-child(4){
+    left: -400px;
+    top: 300px;
+    justify-content: center;
+    animation-delay: 0.9s;
+}
+
+.float_elements .float_info:nth-child(5){
+    left: -500px;
+    top: 100px;
+    justify-content: center;
+    animation-delay: 0.3s;
+}
+
+.float_elements .float_info:nth-child(6){
+    left: -400px;
+    top: -100px;
+    justify-content: center;
+    font-size: medium;
+    animation-delay: .6s;
+}
+
+@keyframes float_info {
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 .team_container {
     display: flex;
-    justify-content: space-around;
     width: 100%;
     align-items: center;
-    padding: 0 100px;
+    flex-direction: column;
+}
+
+.team_container h1{
+    margin-bottom: 50px;
+    font-family: 'Poppins', Courier, monospace;
+    font-size: 5rem;
+    color: #F4FF2F;
+    text-shadow: 0 1px 0 #B4FF00, 0 2px 0 #7dd108, 0 3px 0 #7dd108, 0 4px 0 #6FB213, 0 5px 0 #6FB213, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
 .content__team {
@@ -1181,9 +1297,9 @@ svg {
     height: auto;
 }
 
-.content__team__back:hover>.content__team__info {
+/*.content__team__back:hover>.content__team__info {
     transform: translate(15px, -15px);
-}
+}*/
 
 .content__team__back:hover .content__team__info--text p {
     display: flex;
@@ -1268,7 +1384,7 @@ svg {
     line-height: 0;
     /*Animation*/
 }
-
+/*
 .content__team__info:hover .glitch_team h1:nth-child(1) {
     color: #000000;
     animation: glitch3 2.5s infinite;
@@ -1287,7 +1403,7 @@ svg {
 
 .glitch_team h1:nth-child(3) {
     color: #B4FF00;
-}
+}*/
 
 .content__team__info--text p {
     position: relative;
